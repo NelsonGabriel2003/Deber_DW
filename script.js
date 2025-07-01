@@ -25,3 +25,21 @@ function ejercicios_Nelson() {
 }
 
 ejercicios_Nelson();
+
+const lista_dinamica=document.getElementById('miListaDinamica')
+const agregar_elemento=document.getElementById('agregarElemento')
+
+
+
+lista_dinamica.addEventListener('click', function(event) {
+        if (event.target && event.target.nodeName === 'LI') {
+            alert(event.target.textContent);
+        }
+    });
+
+agregar_elemento.addEventListener('click', function() {
+        const nuevoElemento = document.createElement('li');
+        nuevoElemento.textContent = 'Elemento Nuevo';
+        lista_dinamica.appendChild(nuevoElemento);
+        // event.stopPropagation(); 
+    });
