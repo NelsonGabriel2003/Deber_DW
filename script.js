@@ -1,3 +1,4 @@
+
 function ejercicios_Nelson() {
   const btn = document.getElementById("btnDemo");
 
@@ -41,5 +42,11 @@ agregar_elemento.addEventListener('click', function() {
         const nuevoElemento = document.createElement('li');
         nuevoElemento.textContent = 'Elemento Nuevo';
         lista_dinamica.appendChild(nuevoElemento);
-        // event.stopPropagation(); 
     });
+
+    /*
+    nuevoElemento.addEventListener('click', function() {
+        alert(this.textContent);
+    })
+    */
+   console.dir(lista_dinamica)
